@@ -3,7 +3,7 @@
 /**
  * Функция складывает 2 переданных параметра
  * @param {number} a - первая переменная
- * @param {number} b - первая переменная
+ * @param {number} b - вторая переменная
  * @returns {number} сумма переданных параметров
  */
 function addition(a, b) {
@@ -13,7 +13,7 @@ function addition(a, b) {
 /**
  * Функция вычитает 2 переданных параметра
  * @param {number} a - первая переменная
- * @param {number} b - первая переменная
+ * @param {number} b - вторая переменная
  * @returns {number} разность переданных параметров
  */
 function subtraction(a, b) {
@@ -23,7 +23,7 @@ function subtraction(a, b) {
 /**
  * Функция умножает 2 переданных параметра
  * @param {number} a - первая переменная
- * @param {number} b - первая переменная
+ * @param {number} b - вторая переменная
  * @returns {number} произведение переданных параметров
  */
 function multiplication(a, b) {
@@ -33,7 +33,7 @@ function multiplication(a, b) {
 /**
  * Функция делит 2 переданных параметра
  * @param {number} a - первая переменная
- * @param {number} b - первая переменная
+ * @param {number} b - вторая переменная
  * @returns {number} частное переданных параметров
  */
 function division(a, b) {
