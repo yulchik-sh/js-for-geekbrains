@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        // Задание 2. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров
+
+        const products = [
+            {
+                title: 'Товар 1',
+                price: 200,
+                count: 5
+            },
+            {
+                title: 'Товар 2',
+                price: 900,
+                count: 2
+            },
+            {
+                title: 'Товар 3',
+                price: 1000,
+                count: 4
+            },
+        ];
+
+
+        function countBasketPrice() {
+            var s = 0;
+            for (let item of products) {
+                s += item.price * item.count;
+            }
+            console.log('Общая стоимость товаров в корзине составляет ' + s);
+        }
+
+        countBasketPrice();
+    </script>
+</body>
+
+</html>
