@@ -1,0 +1,39 @@
+td {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+td.black-td{
+    background-color: black;
+    border: 1px solid #000;
+   
+}
+td.white-td{
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+td.rotate{
+    transform: rotate(180deg);
+}
+
+td.white_text {
+    font-size: 30px;
+    font-weight: 600;
+    color:#fff;
+    text-shadow: 1px 0 1px #000, 
+0 1px 1px #000, 
+-1px 0 1px #000, 
+0 -1px 1px #000;
+}
+
+td.black_text {
+ font-size: 30px;
+    font-weight: 600;
+    color:black;
+    text-shadow: 1px 0 1px #fff, 
+0 1px 1px #fff, 
+-1px 0 1px #fff, 
+0 -1px 1px #fff;
+}

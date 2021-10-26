@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 2. Заполнить созданную таблицу буквами, отвечающими за шахматную фигуру, например К – король, Ф – ферзь и т.п.,
+     причем все фигуры должны стоять на своих местах и быть соответственно черными и белыми.-->
+    <script>
+        "use strict";
+        //создаем массив массивов, где хранятся данные по каждой ячейке шахматной доски
+        let boardText =
+            [
+                [' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', ' '],
+                ['8', 'Л', 'К', 'С', 'Ф', 'К', 'С', 'К', 'Л', '8'],
+                ['7', 'П', 'П', 'П', 'П', 'П', 'П', 'П', 'П', '7'],
+                ['6', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '6'],
+                ['5', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '5'],
+                ['4', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '4'],
+                ['3', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '3'],
+                ['2', 'П', 'П', 'П', 'П', 'П', 'П', 'П', 'П', '2'],
+                ['1', 'Л', 'К', 'С', 'Ф', 'К', 'С', 'К', 'Л', '1'],
+                [' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', ' ']
+            ];
+        // функция создает шахматное поле, в ячейках которого указываются буквы или пустые значения
+        function gameField() {
+            //создаем таблицу
+            let table = document.createElement("table");
+            // через цикл создаем 10 строк
+            for (let i = 0; i < 10; i++) {
+                let tr = document.createElement("tr");
+                table.append(tr);
+
+                //через цикл создаем 10 ячеек в строке
+                for (let j = 0; j < 10; j++) {
+                    let td = document.createElement("td");
+                    //проверяем ячейки и переворачиваем текст в верхней части и справа
+                    if (i == 0 || j == 0 || i == 9 || j == 9) {
+                        if (j == 9 || i == 0) {
+                            td.className += "rotate";
+                        }
+                    }
+                    // остальные ячейки закрашиваем в черный или белый цвет
+                    else {
+                        td.className = (i + j) % 2 == 0 ? "white-td " : "black-td ";
+                        if (i == 1 || i == 2) {
+                            td.className += "black_text";
+                        }
+                        else if (i == 7 || i == 8) {
+                            td.className += "white_text";
+                        }
+                    }
+
+                    //вставляем в ячейки данные из массива
+                    td.innerHTML = boardText[i][j];
+
+                    tr.append(td);
+                }
+            }
+            document.body.append(table);
+        }
+        gameField();
+    </script>
+</body>
+
+</html>
